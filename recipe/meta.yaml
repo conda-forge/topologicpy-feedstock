@@ -1,5 +1,5 @@
 {% set name = "topologicpy" %}
-{% set version = "0.8.38" %}
+{% set version = "0.8.39" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/wassimj/topologicpy/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 42cf868c4116f3cffd8a8bae93485bdaed00b8c3f36c6f4e8a5d62b3bd41303f
+  sha256: 874f12830cfcc0de1cdc8d3e233c0b99be996e931090e02993ae62402b999eee
 
 build:
   noarch: python
