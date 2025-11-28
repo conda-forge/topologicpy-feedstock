@@ -1,26 +1,29 @@
-{% set name = "topologicpy" %}
-{% set version = "0.8.91" %}
+schema_version: 1
+
+context:
+  name: topologicpy
+  version: 0.8.91
 
 package:
-  name: {{ name }}
-  version: {{ version }}
+  name: ${{ name }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/wassimj/topologicpy/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/wassimj/topologicpy/archive/refs/tags/v${{ version }}.tar.gz
   sha256: c3ae13a5213e035ce449c022861b679c4a8fd68ca028b3de8e76aa3e0941d852
 
 build:
+  number: 1
   noarch: python
-  number: 0
   script: pip install . -v --no-deps --ignore-installed --no-build-isolation
 
 requirements:
   host:
     - pip
     - setuptools
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - numpy
     - scipy >=1.4.1
     - numpy >=1.18.0
@@ -29,21 +32,19 @@ requirements:
     - tqdm
     - topologic-core >=7.0.1
 
-test:
-  requires:
-    - python {{ python_min }}
-  imports:
-    - topologicpy
-
+tests:
+  - python:
+      imports:
+        - topologicpy
+      python_version: ${{ python_min }}.*
 about:
-  home: https://topologic.app/
-  license_family: AGPL
   license: AGPL-3.0-or-later
   license_file: LICENSE
   summary: The python bindings for topologic
   description: |
     An AI-Powered Spatial Modelling and Analysis Software Library for Architecture, Engineering, and Construction.
-  dev_url: https://github.com/wassimj/topologicpy
+  homepage: https://topologic.app/
+  repository: https://github.com/wassimj/topologicpy
 
 extra:
   recipe-maintainers:
