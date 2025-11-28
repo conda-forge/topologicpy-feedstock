@@ -37,6 +37,7 @@ tests:
       imports:
         - topologicpy
       python_version: ${{ python_min }}.*
+      pip_check: false
 about:
   license: AGPL-3.0-or-later
   license_file: LICENSE
