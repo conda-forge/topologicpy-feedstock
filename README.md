@@ -13,7 +13,6 @@ Development: https://github.com/wassimj/topologicpy
 
 An AI-Powered Spatial Modelling and Analysis Software Library for Architecture, Engineering, and Construction.
 
-
 Current build status
 ====================
 
