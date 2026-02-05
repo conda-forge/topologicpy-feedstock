@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: topologicpy
-  version: "0.8.97"
+  version: "0.8.98"
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/wassimj/topologicpy/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 85faa5ab9458ee3e6e6bfd48d3da2e3902e41126d60764f0143ff9a6a63c1e87
+  sha256: e3b8e0f8da4242ce2ff622bb2f473e75d356e0572bc90564df0508eb7aee4860
 
 build:
   number: 0
