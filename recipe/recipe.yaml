@@ -13,7 +13,7 @@ source:
   sha256: 4a83bf51d7033c3e883c96c3e703741d044c5db208e1e4cb777448b41cd2d141
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -32,6 +32,7 @@ requirements:
     - lark
     - webcolors
     - nbformat
+    - requests
     - pythonocc-core >=7.9.3
 
 tests:
